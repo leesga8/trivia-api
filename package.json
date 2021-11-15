@@ -4,8 +4,8 @@
   "description": "* _List all_\r * _the major technologies_\r * _you used in your project_\r * _here_",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode development",
-    "start": "npm run build && webpack-dev-server --open --mode development",
+    "build": "webpack --mode=development",
+    "start": "npm run build; webpack-dev-server --open --mode development",
     "lint": "eslint src/*.js",
     "test": "jest"
   },
@@ -18,6 +18,7 @@
     "@popperjs/core": "^2.10.2",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
+    "dotenv-webpack": "^2.0.0",
     "eslint": "^7.32.0",
     "eslint-loader": "^4.0.2",
     "file-loader": "^6.2.0",

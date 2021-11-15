@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Trivia Quiz</title>
 </head>
+
 <body>
+  <div class="container">
+    <h1>20 Questions Trivia Quiz</h1>
+    <button id="start" class="btn btn-success">Start</button>
+    <button id="next" class="btn btn-success">Next Question</button>
+    <form id="quizForm">
+      <h2 id="question">THE TRIVIA QUESTION</h2>
+      <div id="answersDiv">
+        <input type="radio" id="a1" name="question" value="">
+        <label for="answer1">ANSWER</label>
+
+        <input type="radio" id="a2" name="question" value="">
+        <label for="a2">ANSWER</label>
+
+        <input type="radio" id="a3" name="question" value="">
+        <label for="a3">ANSWER</label>
+      </div>  
+      <button id="button" class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+    <div id="finalPage">
+      <h2 id="finalTotal">You answered <span id="finalTotalSpan"></span> out of 20 quetions correct</h2>
+      <button id="tryAgain" class="btn btn-primary">Try Again</button>
+    </div>
+  </div>
 </body>
+
 </html>
