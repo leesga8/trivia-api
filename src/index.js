@@ -8,7 +8,7 @@ import { preventOverflow } from '@popperjs/core';
 $(document).ready(function () {
   $('#start').click(function () {
     let request = new XMLHttpRequest();
-    const url = "https://api.trivia.willfry.co.uk/questions?categories=food_and_drink,general_knowledge,society_and_culture&limit=20"
+    const url = "https://api.trivia.willfry.co.uk/questions?categories=food_and_drink,general_knowledge,history,society_and_culture,sport_and_leisure&limit=10"
 
     request.onreadystatechange = function () {
       if (this.readyState === 4 && this.status === 200) {
@@ -36,11 +36,11 @@ $(document).ready(function () {
         $('#answersDiv').html("");
         Answers.forEach(function (answer) {
           if(answer !== correctAnswer) {
-          $('#answersDiv').append(`<input type="radio" id="${answer}" name="feild${questionNum}" value="${answer}">
-          <label class="incorrect answer" for="${answer}">${answer}</label>`)
+          $('#answersDiv').append(`<div><input type="radio" id="${answer}" name="feild${questionNum}" value="${answer}">
+          <label class="incorrect answer" for="${answer}">${answer}</label></div>`)
           } else {
-            $('#answersDiv').append(`<input type="radio" id="${answer}" name="feild${questionNum}" value="${answer}">
-          <label class="correct answer" for="${answer}">${answer}</label>`)
+            $('#answersDiv').append(`<div><input type="radio" id="${answer}" name="feild${questionNum}" value="${answer}">
+          <label class="correct answer" for="${answer}">${answer}</label></div>`)
           }
         });
       }
@@ -69,7 +69,7 @@ $(document).ready(function () {
       })
 
       $('#next').click(function(){
-        if (questionNum === 20) {
+        if (questionNum === 10) {
           $("#next").hide();
           $("#finalPage").show();
           $("#quizForm").hide();
